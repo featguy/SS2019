@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Mobile"
+             x:Class="Mobile.MainPage">
+    <ContentPage.Content>
+        <ListView x:Name="lister" SeparatorVisibility="None" HasUnevenRows="True" ItemSelected="lister_ItemSelected">
+            <ListView.Header>
+                <StackLayout>
+                    <Label Text="SUNDAY SCHOOL MANUAL LESSONS"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.Footer>
+                <StackLayout>
+                    <Label Text="ECWA SOUTH WEST"/>
+                </StackLayout>
+            </ListView.Footer>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Index}"/>
+                            <Label Text="{Binding Topic}"/>
+                            <Label Text="{Binding Text}"/>
+                            <Label Text="{Binding Date}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+    </ContentPage.Content>
+  
+
+</ContentPage>
